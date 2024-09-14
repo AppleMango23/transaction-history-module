@@ -1,9 +1,11 @@
 import React, {useEffect} from 'react';
 
-import {SafeAreaView, Text} from 'react-native';
+import {FlatList, SafeAreaView, Text, TouchableOpacity} from 'react-native';
 
+import {MockTransactionDataList} from '~MockData/MockTransactionDataList';
+
+import {ITransactionList, TransactionHistoryProps} from './types';
 import {styles} from './styles';
-import {TransactionHistoryProps} from './types';
 
 export default function TransactionHistory({
   navigation,
@@ -11,9 +13,27 @@ export default function TransactionHistory({
 }: TransactionHistoryProps) {
   useEffect(() => {}, []);
 
+  // MARK: Render Methods
+  function renderItemTransaction({item}: {item: ITransactionList}) {
+    const {description, amount, date, type} = item || {};
+
+    return (
+      <TouchableOpacity style={styles.transactionItemWrapper}>
+        <Text style={styles.transactionDescription}>{description}</Text>
+        <Text style={styles.transactionText}>{amount}</Text>
+        <Text style={styles.transactionText}>{date}</Text>
+        <Text style={styles.transactionText}>{type}</Text>
+      </TouchableOpacity>
+    );
+  }
+
   return (
     <SafeAreaView>
-      <Text>Welcome</Text>
+      <Text>Transaction Screen</Text>
+      <FlatList
+        data={MockTransactionDataList}
+        renderItem={renderItemTransaction}
+      />
     </SafeAreaView>
   );
 }
