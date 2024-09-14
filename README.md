@@ -1,4 +1,4 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+Check out the demo video below, if you want to have a peek on how it worked.
 
 # Getting Started
 
