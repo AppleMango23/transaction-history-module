@@ -1,4 +1,4 @@
-module.exports = {
+const Colors = {
   THEME_1: '#831519',
   THEME_2: '#F94A3E',
   WHITE: '#FFFFFF',
@@ -37,3 +37,5 @@ module.exports = {
   ORANGE_WARNING: '#FB7A2D',
   GREEN_SUCCESS: '#35B82E',
 };
+
+export default Colors;
