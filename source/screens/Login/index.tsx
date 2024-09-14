@@ -27,7 +27,9 @@ export default function Login({navigation, route}: LoginProps) {
         throw error;
       }
 
-      navigation.replace('TransactionHistory');
+      setTimeout(() => {
+        navigation.replace('TransactionHistory');
+      }, 1000);
     } catch (error) {
       Alert.alert('Something went wrong', error);
     }
