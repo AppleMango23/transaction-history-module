@@ -25,6 +25,11 @@ export default function TransactionHistory({
 
   // MARK: Events
   function onTransactionButtonPress(item: ITransactionList) {
+    if (isMasked) {
+      onBiometricButtonPress();
+      return;
+    }
+
     navigation.navigate('TransactionDetails', item);
   }
 
