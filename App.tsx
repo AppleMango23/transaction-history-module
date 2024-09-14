@@ -3,7 +3,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
-import {MainStack} from './source/routes';
+import {MainStack} from '~routes';
 
 function App(): React.JSX.Element {
   return (
