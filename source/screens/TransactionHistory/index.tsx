@@ -1,6 +1,12 @@
 import React, {useEffect} from 'react';
 
-import {FlatList, SafeAreaView, Text, TouchableOpacity} from 'react-native';
+import {
+  FlatList,
+  SafeAreaView,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
 import {MockTransactionDataList} from '~MockData/MockTransactionDataList';
 
@@ -19,17 +25,22 @@ export default function TransactionHistory({
 
     return (
       <TouchableOpacity style={styles.transactionItemWrapper}>
-        <Text style={styles.transactionDescription}>{description}</Text>
-        <Text style={styles.transactionText}>{amount}</Text>
-        <Text style={styles.transactionText}>{date}</Text>
-        <Text style={styles.transactionText}>{type}</Text>
+        <View style={styles.transactionItemRow}>
+          <Text style={styles.transactionText} numberOfLines={1}>
+            {description}
+          </Text>
+          <Text style={styles.transactionTextDeduct}>{`-RM ${amount}`}</Text>
+        </View>
+        <View style={styles.transactionItemRow}>
+          <Text style={styles.transactionDate}>{date}</Text>
+          <Text style={styles.transactionType}>{type}</Text>
+        </View>
       </TouchableOpacity>
     );
   }
 
   return (
     <SafeAreaView>
-      <Text>Transaction Screen</Text>
       <FlatList
         data={MockTransactionDataList}
         renderItem={renderItemTransaction}
