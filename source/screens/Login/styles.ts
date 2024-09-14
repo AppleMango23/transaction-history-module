@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   description: {
     fontSize: 15,
     textAlign: 'center',
-    marginVertical: 20,
+    marginVertical: 60,
   },
   biometricButton: {
     backgroundColor: Colors.THEME_1,

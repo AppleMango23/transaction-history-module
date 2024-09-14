@@ -1,18 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import {Alert, Text, TouchableOpacity, View} from 'react-native';
+import {Alert, Text, View} from 'react-native';
 
 import ReactNativeBiometrics from 'react-native-biometrics';
+
+import {BlockButton} from '~components';
 
 import {styles} from './styles';
 import {LoginProps} from './types';
 
 export default function Login({navigation, route}: LoginProps) {
+  const [isLoading, setIsLoading] = useState(false);
+
   const biometrics = new ReactNativeBiometrics({allowDeviceCredentials: true});
 
   // MARK: Events
   async function onBiometricButtonPress() {
     try {
+      setIsLoading(true);
+
       const {success, error} = await biometrics.simplePrompt({
         promptMessage: 'Confirmation',
       });
@@ -27,19 +33,6 @@ export default function Login({navigation, route}: LoginProps) {
     }
   }
 
-  // MARK: Render Methods
-  function renderBiometricButton() {
-    return (
-      <TouchableOpacity
-        onPress={onBiometricButtonPress}
-        style={styles.biometricButton}>
-        <Text style={styles.biometricButtonText}>
-          {'Start Biometric session'}
-        </Text>
-      </TouchableOpacity>
-    );
-  }
-
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{'Welcome User'}</Text>
@@ -48,7 +41,13 @@ export default function Login({navigation, route}: LoginProps) {
           'The app required user to unlock via biometric sensor for security reason. Please press on the button below to activate the process.'
         }
       </Text>
-      {renderBiometricButton()}
+      <BlockButton
+        text={'Start Biometric session'}
+        style={styles.biometricButton}
+        textStyle={styles.biometricButtonText}
+        onPress={onBiometricButtonPress}
+        isLoading={isLoading}
+      />
     </View>
   );
 }
