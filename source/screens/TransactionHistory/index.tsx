@@ -17,14 +17,19 @@ export default function TransactionHistory({
   navigation,
   route,
 }: TransactionHistoryProps) {
-  useEffect(() => {}, []);
+  // MARK: Events
+  function onTransactionButtonPress(item: ITransactionList) {
+    navigation.navigate('TransactionDetails', item);
+  }
 
   // MARK: Render Methods
   function renderItemTransaction({item}: {item: ITransactionList}) {
     const {description, amount, date, type} = item || {};
 
     return (
-      <TouchableOpacity style={styles.transactionItemWrapper}>
+      <TouchableOpacity
+        onPress={() => onTransactionButtonPress(item)}
+        style={styles.transactionItemWrapper}>
         <View style={styles.transactionItemRow}>
           <Text style={styles.transactionText} numberOfLines={1}>
             {description}
