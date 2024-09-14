@@ -49,3 +49,6 @@ This is one way to run your app — you can also run it directly from within And
 ## Congratulations! :tada:
 
 You've successfully run and modified your React Native App. :partying_face:
+
+https://github.com/user-attachments/assets/9018340c-d3aa-4094-8907-9324c219c563
+
