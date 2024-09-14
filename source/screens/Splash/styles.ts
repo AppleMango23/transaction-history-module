@@ -6,9 +6,4 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  logo: {
-    width: '40%',
-    height: undefined,
-    aspectRatio: 1 / 1,
-  },
 });

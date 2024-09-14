@@ -14,7 +14,7 @@ export default function Splash({navigation, route}: SplashProps) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Welcome to splash screen</Text>
+      <Text>Splash Screen</Text>
     </SafeAreaView>
   );
 }
