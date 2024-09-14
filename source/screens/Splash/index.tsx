@@ -7,14 +7,14 @@ import {SplashProps} from './types';
 
 export default function Splash({navigation, route}: SplashProps) {
   useEffect(() => {
-    // setTimeout(() => {
-    //   navigation.navigate("Login")
-    // }, 1500)
+    setTimeout(() => {
+      navigation.navigate('Login');
+    }, 1500);
   }, []);
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Welcome</Text>
+      <Text>Welcome to splash screen</Text>
     </SafeAreaView>
   );
 }
