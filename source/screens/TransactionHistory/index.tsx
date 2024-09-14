@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {
   Alert,
   FlatList,
+  RefreshControl,
   SafeAreaView,
   Text,
   TouchableOpacity,
@@ -20,6 +21,7 @@ export default function TransactionHistory({
   navigation,
 }: TransactionHistoryProps) {
   const [isMasked, setIsMasked] = useState(true);
+  const [isRefreshing, setIsRefreshing] = useState(false);
 
   const biometrics = new ReactNativeBiometrics({allowDeviceCredentials: true});
 
@@ -50,6 +52,14 @@ export default function TransactionHistory({
     } catch (error) {
       Alert.alert('Something went wrong', error);
     }
+  }
+
+  function onRefreshing() {
+    setIsRefreshing(true);
+
+    setTimeout(() => {
+      setIsRefreshing(false);
+    }, 800);
   }
 
   // MARK: Render Methods
@@ -86,6 +96,9 @@ export default function TransactionHistory({
       <FlatList
         data={MockTransactionDataList}
         renderItem={renderItemTransaction}
+        refreshControl={
+          <RefreshControl refreshing={isRefreshing} onRefresh={onRefreshing} />
+        }
       />
     </SafeAreaView>
   );
