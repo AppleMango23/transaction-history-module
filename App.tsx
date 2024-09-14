@@ -1,13 +1,17 @@
 import React from 'react';
-import {SafeAreaView, Text, useColorScheme} from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {NavigationContainer} from '@react-navigation/native';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+
+import {MainStack} from '~routes';
 
 function App(): React.JSX.Element {
   return (
-    <SafeAreaView>
-      <Text>Hello</Text>
-    </SafeAreaView>
+    <GestureHandlerRootView style={{flex: 1}}>
+      <NavigationContainer>
+        <MainStack />
+      </NavigationContainer>
+    </GestureHandlerRootView>
   );
 }
 
