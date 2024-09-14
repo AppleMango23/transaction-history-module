@@ -8,7 +8,7 @@ import {SplashProps} from './types';
 export default function Splash({navigation, route}: SplashProps) {
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate('Login');
+      navigation.replace('Login');
     }, 1500);
   }, []);
 
