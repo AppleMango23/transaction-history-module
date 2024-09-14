@@ -8,11 +8,25 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 export default function MainStack() {
   return (
-    <Stack.Navigator
-      screenOptions={{headerShown: false, gestureEnabled: false}}>
-      <Stack.Screen name="Splash" component={Splash} />
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="TransactionHistory" component={TransactionHistory} />
+    <Stack.Navigator screenOptions={{gestureEnabled: false}}>
+      <Stack.Screen
+        name="Splash"
+        component={Splash}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="TransactionHistory"
+        component={TransactionHistory}
+        options={{
+          title: 'Transaction History',
+          headerLeft: () => null,
+        }}
+      />
       <Stack.Screen name="TransactionDetails" component={TransactionDetails} />
     </Stack.Navigator>
   );
