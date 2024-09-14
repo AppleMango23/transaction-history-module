@@ -10,12 +10,16 @@ export default function TransactionDetails({route}: TransactionDetailsProps) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.textStandard}>{`Payment Id: ${id}`}</Text>
-      <Text style={styles.textStandard}>{`Date: ${date}`}</Text>
-      <Text style={styles.textStandard}>{`Description: ${description}`}</Text>
-      <Text style={styles.textStandard}>{`Type: ${type}`}</Text>
-      <Text style={styles.textStandard}>{`Amount: ${amount}`}</Text>
-      <Text style={styles.textStandard}>{`Card: ${cardInfo}`}</Text>
+      <View style={styles.cardDetails}>
+        <Text style={styles.paymentIdText}>{`Payment Id: ${id}`}</Text>
+        <Text style={styles.textStandard}>{`Date: ${date}`}</Text>
+        <Text style={styles.textStandard}>{`Description: ${description}`}</Text>
+        <View style={styles.rowWrapper}>
+          <Text style={styles.textStandard}>{`Type: ${type}`}</Text>
+          <Text style={styles.textStandard}>{`Amount: ${amount}`}</Text>
+        </View>
+        <Text style={styles.textStandard}>{`Card: ${cardInfo}`}</Text>
+      </View>
     </View>
   );
 }
