@@ -5,6 +5,7 @@ export const MockTransactionDataList = [
     date: '20-05-2024',
     description: 'Bought Samsung Galaxy S24 for Jenny Birthday',
     type: 'debit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 3131,
@@ -12,6 +13,7 @@ export const MockTransactionDataList = [
     date: '21-05-2024',
     description: 'Lunch with family',
     type: 'credit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 5512,
@@ -19,6 +21,7 @@ export const MockTransactionDataList = [
     date: '22-05-2024',
     description: 'Bought Samsung Galaxy S24 for Jenny Birthday',
     type: 'debit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 5513,
@@ -26,6 +29,7 @@ export const MockTransactionDataList = [
     date: '23-05-2024',
     description: 'Lunch with colleague',
     type: 'credit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 3399,
@@ -33,6 +37,7 @@ export const MockTransactionDataList = [
     date: '24-05-2024',
     description: 'Bought watch for kid',
     type: 'debit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 2216,
@@ -40,6 +45,7 @@ export const MockTransactionDataList = [
     date: '25-05-2024',
     description: 'Lunch with relatives',
     type: 'credit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 2212,
@@ -47,6 +53,7 @@ export const MockTransactionDataList = [
     date: '26-05-2024',
     description: 'Bought a new T-shirt',
     type: 'debit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 8000,
@@ -54,6 +61,7 @@ export const MockTransactionDataList = [
     date: '27-05-2024',
     description: 'Lunch with girlfriend',
     type: 'credit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 9912,
@@ -61,6 +69,7 @@ export const MockTransactionDataList = [
     date: '28-05-2024',
     description: 'Bought Samsung Galaxy S24 Ultra for Mom Birthday',
     type: 'debit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 3311,
@@ -68,6 +77,7 @@ export const MockTransactionDataList = [
     date: '29-05-2024',
     description: 'Lunch with family',
     type: 'credit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 3345,
@@ -75,6 +85,7 @@ export const MockTransactionDataList = [
     date: '01-06-2024',
     description: 'Took a grab',
     type: 'debit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 5511,
@@ -82,6 +93,7 @@ export const MockTransactionDataList = [
     date: '02-06-2024',
     description: 'Lunch with family',
     type: 'credit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 6612,
@@ -89,6 +101,7 @@ export const MockTransactionDataList = [
     date: '02-06-2024',
     description: 'Lunch with family',
     type: 'debit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 3328,
@@ -96,6 +109,7 @@ export const MockTransactionDataList = [
     date: '03-06-2024',
     description: 'Lunch with family',
     type: 'credit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 9976,
@@ -103,6 +117,7 @@ export const MockTransactionDataList = [
     date: '03-06-2024',
     description: 'Lunch with family',
     type: 'debit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 5821,
@@ -110,6 +125,7 @@ export const MockTransactionDataList = [
     date: '03-06-2024',
     description: 'Lunch with family',
     type: 'credit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 3318,
@@ -117,6 +133,7 @@ export const MockTransactionDataList = [
     date: '03-06-2024',
     description: 'Lunch with family',
     type: 'debit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 5522,
@@ -124,6 +141,7 @@ export const MockTransactionDataList = [
     date: '03-06-2024',
     description: 'Lunch with family',
     type: 'credit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 8891,
@@ -131,6 +149,7 @@ export const MockTransactionDataList = [
     date: '03-06-2024',
     description: 'Lunch with family',
     type: 'debit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 9191,
@@ -138,6 +157,7 @@ export const MockTransactionDataList = [
     date: '03-06-2024',
     description: 'Lunch with family',
     type: 'credit',
+    cardInfo: '3123 3311 9192 3011',
   },
   {
     id: 1102,
@@ -145,5 +165,6 @@ export const MockTransactionDataList = [
     date: '03-06-2024',
     description: 'Lunch with family',
     type: 'debit',
+    cardInfo: '3123 3311 9192 3011',
   },
 ];

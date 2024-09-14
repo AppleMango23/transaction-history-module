@@ -6,7 +6,7 @@ import {styles} from './styles';
 import {TransactionDetailsProps} from './types';
 
 export default function TransactionDetails({route}: TransactionDetailsProps) {
-  const {id, amount, date, description, type} = route.params;
+  const {id, amount, date, description, type, cardInfo} = route.params;
 
   return (
     <View style={styles.container}>
@@ -15,6 +15,7 @@ export default function TransactionDetails({route}: TransactionDetailsProps) {
       <Text style={styles.textStandard}>{`Description: ${description}`}</Text>
       <Text style={styles.textStandard}>{`Type: ${type}`}</Text>
       <Text style={styles.textStandard}>{`Amount: ${amount}`}</Text>
+      <Text style={styles.textStandard}>{`Card: ${cardInfo}`}</Text>
     </View>
   );
 }
