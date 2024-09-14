@@ -14,4 +14,5 @@ export type ITransactionList = {
   date: string;
   description: string;
   type: string;
+  cardInfo: string;
 };

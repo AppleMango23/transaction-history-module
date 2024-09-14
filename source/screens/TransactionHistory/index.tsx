@@ -1,6 +1,12 @@
 import React, {useEffect} from 'react';
 
-import {FlatList, SafeAreaView, Text, TouchableOpacity} from 'react-native';
+import {
+  FlatList,
+  SafeAreaView,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
 import {MockTransactionDataList} from '~MockData/MockTransactionDataList';
 
@@ -9,27 +15,37 @@ import {styles} from './styles';
 
 export default function TransactionHistory({
   navigation,
-  route,
 }: TransactionHistoryProps) {
-  useEffect(() => {}, []);
+  // MARK: Events
+  function onTransactionButtonPress(item: ITransactionList) {
+    navigation.navigate('TransactionDetails', item);
+  }
 
   // MARK: Render Methods
   function renderItemTransaction({item}: {item: ITransactionList}) {
-    const {description, amount, date, type} = item || {};
+    const {id, description, amount, date, type} = item || {};
 
     return (
-      <TouchableOpacity style={styles.transactionItemWrapper}>
-        <Text style={styles.transactionDescription}>{description}</Text>
-        <Text style={styles.transactionText}>{amount}</Text>
-        <Text style={styles.transactionText}>{date}</Text>
-        <Text style={styles.transactionText}>{type}</Text>
+      <TouchableOpacity
+        onPress={() => onTransactionButtonPress(item)}
+        style={styles.transactionItemWrapper}>
+        <View style={styles.transactionItemRow}>
+          <Text style={styles.transactionText} numberOfLines={1}>
+            {description}
+          </Text>
+          <Text style={styles.transactionTextDeduct}>{`-RM ${amount}`}</Text>
+        </View>
+        <View style={styles.transactionItemRow}>
+          <Text style={styles.transactionDate}>{date}</Text>
+          <Text style={styles.transactionType}>{type}</Text>
+        </View>
+        <Text>{`Payment Id: ${id}`}</Text>
       </TouchableOpacity>
     );
   }
 
   return (
     <SafeAreaView>
-      <Text>Transaction Screen</Text>
       <FlatList
         data={MockTransactionDataList}
         renderItem={renderItemTransaction}
