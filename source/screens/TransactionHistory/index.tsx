@@ -15,7 +15,6 @@ import {styles} from './styles';
 
 export default function TransactionHistory({
   navigation,
-  route,
 }: TransactionHistoryProps) {
   // MARK: Events
   function onTransactionButtonPress(item: ITransactionList) {
@@ -24,7 +23,7 @@ export default function TransactionHistory({
 
   // MARK: Render Methods
   function renderItemTransaction({item}: {item: ITransactionList}) {
-    const {description, amount, date, type} = item || {};
+    const {id, description, amount, date, type} = item || {};
 
     return (
       <TouchableOpacity
@@ -40,6 +39,7 @@ export default function TransactionHistory({
           <Text style={styles.transactionDate}>{date}</Text>
           <Text style={styles.transactionType}>{type}</Text>
         </View>
+        <Text>{`Payment Id: ${id}`}</Text>
       </TouchableOpacity>
     );
   }
